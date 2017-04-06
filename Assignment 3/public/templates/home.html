@@ -1,0 +1,28 @@
+<h1><center>Data Mining Assignment 3</center></h1>
+<h2><center>A custom web/local search</center></h2>
+<h3><center>By: Joshua Galindo</center></h3>
+<br/>
+<center>
+	<form ng-init="searchType='google'">
+	  <input type="radio" name="searchType" ng-model="searchType" value="google" id="google" checked="checked"> Google
+	  <input type="radio" name="searchType" ng-model="searchType" value="local" id="local"> Local
+	</form>
+</center>
+
+<div ng-Show="searchType == 'google'">
+	<gcse:search></gcse:search>
+</div>
+<div ng-Show="searchType == 'local'">
+	<form ng-submit="userSearch()" class="form-horizontal">
+		<center>
+
+			<div class="input-group">
+	      <input type="text" class="form-control" name="search" ng-model="data.search" class="form-control" placeholder="Search for...">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">Search</button>
+	      </span>
+	    </div>
+		</center>
+
+	</form>
+</div>

@@ -1,0 +1,99 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+physician-fee-freeze = n
+|   adoption-of-the-budget-resolution = n
+|   |   synfuels-corporation-cutback = n
+|   |   |   superfund-right-to-sue = n
+|   |   |   |   el-salvador-aid = n
+|   |   |   |   |   religious-groups-in-schools = n: republican (2.01/1.0)
+|   |   |   |   |   religious-groups-in-schools = y: democrat (2.12/0.01)
+|   |   |   |   el-salvador-aid = y: republican (2.01/1.0)
+|   |   |   superfund-right-to-sue = y: democrat (4.21/0.08)
+|   |   synfuels-corporation-cutback = y: democrat (15.3/0.07)
+|   adoption-of-the-budget-resolution = y: democrat (227.75/1.57)
+physician-fee-freeze = y
+|   synfuels-corporation-cutback = n
+|   |   education-spending = n
+|   |   |   religious-groups-in-schools = n: republican (6.15/0.01)
+|   |   |   religious-groups-in-schools = y
+|   |   |   |   duty-free-exports = n: republican (9.27/0.58)
+|   |   |   |   duty-free-exports = y
+|   |   |   |   |   anti-satellite-test-ban = n: democrat (2.47/0.36)
+|   |   |   |   |   anti-satellite-test-ban = y: republican (2.03/0.0)
+|   |   education-spending = y: republican (125.78/1.29)
+|   synfuels-corporation-cutback = y
+|   |   mx-missile = n
+|   |   |   adoption-of-the-budget-resolution = n
+|   |   |   |   immigration = n
+|   |   |   |   |   anti-satellite-test-ban = n
+|   |   |   |   |   |   export-administration-act-south-africa = n
+|   |   |   |   |   |   |   handicapped-infants = n: democrat (3.97/1.97)
+|   |   |   |   |   |   |   handicapped-infants = y: republican (2.55/0.55)
+|   |   |   |   |   |   export-administration-act-south-africa = y: republican (5.41/0.77)
+|   |   |   |   |   anti-satellite-test-ban = y: republican (2.04)
+|   |   |   |   immigration = y: republican (8.63)
+|   |   |   adoption-of-the-budget-resolution = y
+|   |   |   |   anti-satellite-test-ban = n: democrat (5.04/0.02)
+|   |   |   |   anti-satellite-test-ban = y: republican (2.21)
+|   |   mx-missile = y: democrat (6.03/1.03)
+
+Number of Leaves  : 	19
+
+Size of the tree : 	37
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         419               96.3218 %
+Incorrectly Classified Instances        16                3.6782 %
+Kappa statistic                          0.9224
+Mean absolute error                      0.0552
+Root mean squared error                  0.1748
+Relative absolute error                 11.6378 %
+Root relative squared error             35.8923 %
+Total Number of Instances              435     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.970    0.048    0.970      0.970    0.970      0.922    0.978     0.980     democrat
+                 0.952    0.030    0.952      0.952    0.952      0.922    0.977     0.955     republican
+Weighted Avg.    0.963    0.041    0.963      0.963    0.963      0.922    0.978     0.971     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 259   8 |   a = democrat
+   8 160 |   b = republican
+

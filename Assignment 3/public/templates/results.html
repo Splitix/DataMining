@@ -1,0 +1,7 @@
+<div style="margin:30px auto;">
+<h1>{{data.total}} Search Results</h1> <br />
+<a href="#!/home" class="btn btn-default" role="button">Back to search</a> <br />
+<div ng-repeat="result in data.hits">
+	<a href="#!/details" ng-click="details(result)">{{result._source.Song}} by {{result._source.Artist}} </a> <br />
+</div>
+</div>

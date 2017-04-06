@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     weather
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+outlook = sunny
+|   humidity < 77.5 : yes (2/0)
+|   humidity >= 77.5 : no (3/0)
+outlook = overcast : yes (4/0)
+outlook = rainy
+|   windy = TRUE : no (2/0)
+|   windy = FALSE : yes (3/0)
+
+Size of the tree : 8
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          11               78.5714 %
+Incorrectly Classified Instances         3               21.4286 %
+Kappa statistic                          0.5116
+Mean absolute error                      0.2143
+Root mean squared error                  0.4629
+Relative absolute error                 45      %
+Root relative squared error             93.8273 %
+Total Number of Instances               14     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.889    0.400    0.800      0.889    0.842      0.519    0.744     0.783     yes
+                 0.600    0.111    0.750      0.600    0.667      0.519    0.744     0.593     no
+Weighted Avg.    0.786    0.297    0.782      0.786    0.779      0.519    0.744     0.715     
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 8 1 | a = yes
+ 2 3 | b = no
+

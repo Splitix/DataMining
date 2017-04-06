@@ -1,0 +1,203 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+el-salvador-aid = n
+|   physician-fee-freeze = n
+|   |   duty-free-exports = n
+|   |   |   anti-satellite-test-ban = n
+|   |   |   |   synfuels-corporation-cutback = n
+|   |   |   |   |   crime = n : republican (0.96/0)
+|   |   |   |   |   crime = y
+|   |   |   |   |   |   handicapped-infants = n : democrat (2.02/0.01)
+|   |   |   |   |   |   handicapped-infants = y : democrat (0.05/0)
+|   |   |   |   synfuels-corporation-cutback = y
+|   |   |   |   |   handicapped-infants = n : democrat (0.79/0.01)
+|   |   |   |   |   handicapped-infants = y : democrat (2.12/0)
+|   |   |   anti-satellite-test-ban = y
+|   |   |   |   adoption-of-the-budget-resolution = n
+|   |   |   |   |   handicapped-infants = n : democrat (1.26/0.01)
+|   |   |   |   |   handicapped-infants = y : republican (1.25/0.25)
+|   |   |   |   adoption-of-the-budget-resolution = y
+|   |   |   |   |   handicapped-infants = n
+|   |   |   |   |   |   crime = n : democrat (5.94/0.01)
+|   |   |   |   |   |   crime = y : democrat (5.15/0.12)
+|   |   |   |   |   handicapped-infants = y : democrat (36.99/0.09)
+|   |   duty-free-exports = y
+|   |   |   crime = n : democrat (124.23/0.29)
+|   |   |   crime = y
+|   |   |   |   handicapped-infants = n : democrat (16.9/0.38)
+|   |   |   |   handicapped-infants = y : democrat (8.99/0.02)
+|   physician-fee-freeze = y
+|   |   immigration = n
+|   |   |   education-spending = n
+|   |   |   |   crime = n : democrat (1.09/0)
+|   |   |   |   crime = y : democrat (1.01/0.01)
+|   |   |   education-spending = y : republican (1.06/0.02)
+|   |   immigration = y
+|   |   |   synfuels-corporation-cutback = n
+|   |   |   |   religious-groups-in-schools = n : republican (3.02/0.01)
+|   |   |   |   religious-groups-in-schools = y : republican (1.54/0.04)
+|   |   |   synfuels-corporation-cutback = y : republican (1.06/0.05)
+el-salvador-aid = y
+|   synfuels-corporation-cutback = n
+|   |   physician-fee-freeze = n
+|   |   |   handicapped-infants = n
+|   |   |   |   superfund-right-to-sue = n
+|   |   |   |   |   crime = n : democrat (1.36/0)
+|   |   |   |   |   crime = y
+|   |   |   |   |   |   mx-missile = n : republican (1.01/0)
+|   |   |   |   |   |   mx-missile = y : democrat (1.01/0.01)
+|   |   |   |   superfund-right-to-sue = y : democrat (4.83/0.03)
+|   |   |   handicapped-infants = y : democrat (8.42/0.02)
+|   |   physician-fee-freeze = y
+|   |   |   adoption-of-the-budget-resolution = n
+|   |   |   |   export-administration-act-south-africa = n
+|   |   |   |   |   mx-missile = n : republican (49.03/0)
+|   |   |   |   |   mx-missile = y : democrat (0.11/0)
+|   |   |   |   export-administration-act-south-africa = y
+|   |   |   |   |   duty-free-exports = n
+|   |   |   |   |   |   mx-missile = n : republican (60.67/0)
+|   |   |   |   |   |   mx-missile = y : republican (6.21/0.15)
+|   |   |   |   |   duty-free-exports = y
+|   |   |   |   |   |   aid-to-nicaraguan-contras = n
+|   |   |   |   |   |   |   water-project-cost-sharing = n
+|   |   |   |   |   |   |   |   mx-missile = n : republican (3.12/0)
+|   |   |   |   |   |   |   |   mx-missile = y : democrat (0.01/0)
+|   |   |   |   |   |   |   water-project-cost-sharing = y : democrat (1.15/0.14)
+|   |   |   |   |   |   aid-to-nicaraguan-contras = y : republican (0.16/0)
+|   |   |   adoption-of-the-budget-resolution = y
+|   |   |   |   anti-satellite-test-ban = n
+|   |   |   |   |   immigration = n : democrat (2.01/0.01)
+|   |   |   |   |   immigration = y
+|   |   |   |   |   |   water-project-cost-sharing = n
+|   |   |   |   |   |   |   mx-missile = n : republican (1.63/0)
+|   |   |   |   |   |   |   mx-missile = y : republican (1.01/0.01)
+|   |   |   |   |   |   water-project-cost-sharing = y
+|   |   |   |   |   |   |   superfund-right-to-sue = n : republican (0.45/0)
+|   |   |   |   |   |   |   superfund-right-to-sue = y : republican (1.71/0.64)
+|   |   |   |   anti-satellite-test-ban = y
+|   |   |   |   |   mx-missile = n : republican (7.74/0)
+|   |   |   |   |   mx-missile = y : republican (4.05/0.03)
+|   synfuels-corporation-cutback = y
+|   |   adoption-of-the-budget-resolution = n
+|   |   |   superfund-right-to-sue = n
+|   |   |   |   anti-satellite-test-ban = n
+|   |   |   |   |   physician-fee-freeze = n : democrat (1.39/0.01)
+|   |   |   |   |   physician-fee-freeze = y
+|   |   |   |   |   |   water-project-cost-sharing = n : republican (1.01/0)
+|   |   |   |   |   |   water-project-cost-sharing = y : democrat (1.05/0.05)
+|   |   |   |   anti-satellite-test-ban = y : democrat (1.13/0.01)
+|   |   |   superfund-right-to-sue = y
+|   |   |   |   education-spending = n
+|   |   |   |   |   physician-fee-freeze = n
+|   |   |   |   |   |   crime = n : democrat (0.09/0)
+|   |   |   |   |   |   crime = y
+|   |   |   |   |   |   |   handicapped-infants = n : democrat (1.01/0.01)
+|   |   |   |   |   |   |   handicapped-infants = y : democrat (1/0)
+|   |   |   |   |   physician-fee-freeze = y
+|   |   |   |   |   |   immigration = n
+|   |   |   |   |   |   |   export-administration-act-south-africa = n : democrat (0.34/0.11)
+|   |   |   |   |   |   |   export-administration-act-south-africa = y
+|   |   |   |   |   |   |   |   crime = n : democrat (0.16/0)
+|   |   |   |   |   |   |   |   crime = y
+|   |   |   |   |   |   |   |   |   mx-missile = n
+|   |   |   |   |   |   |   |   |   |   handicapped-infants = n : republican (0.29/0)
+|   |   |   |   |   |   |   |   |   |   handicapped-infants = y : republican (1.88/0.87)
+|   |   |   |   |   |   |   |   |   mx-missile = y : democrat (0.01/0)
+|   |   |   |   |   |   immigration = y : republican (1.01/0)
+|   |   |   |   education-spending = y
+|   |   |   |   |   physician-fee-freeze = n
+|   |   |   |   |   |   handicapped-infants = n : democrat (1.51/0.01)
+|   |   |   |   |   |   handicapped-infants = y : democrat (2.01/0)
+|   |   |   |   |   physician-fee-freeze = y
+|   |   |   |   |   |   crime = n : republican (1.02/0)
+|   |   |   |   |   |   crime = y
+|   |   |   |   |   |   |   export-administration-act-south-africa = n
+|   |   |   |   |   |   |   |   handicapped-infants = n
+|   |   |   |   |   |   |   |   |   immigration = n
+|   |   |   |   |   |   |   |   |   |   mx-missile = n
+|   |   |   |   |   |   |   |   |   |   |   water-project-cost-sharing = n : democrat (1.01/0.01)
+|   |   |   |   |   |   |   |   |   |   |   water-project-cost-sharing = y : republican (1.81/0)
+|   |   |   |   |   |   |   |   |   |   mx-missile = y : democrat (0.01/0)
+|   |   |   |   |   |   |   |   |   immigration = y
+|   |   |   |   |   |   |   |   |   |   mx-missile = n : republican (2.78/0)
+|   |   |   |   |   |   |   |   |   |   mx-missile = y : democrat (0.01/0)
+|   |   |   |   |   |   |   |   handicapped-infants = y
+|   |   |   |   |   |   |   |   |   mx-missile = n : republican (2/0)
+|   |   |   |   |   |   |   |   |   mx-missile = y : democrat (0.4/0)
+|   |   |   |   |   |   |   export-administration-act-south-africa = y
+|   |   |   |   |   |   |   |   mx-missile = n : republican (8.77/0)
+|   |   |   |   |   |   |   |   mx-missile = y : democrat (0.02/0)
+|   |   adoption-of-the-budget-resolution = y
+|   |   |   anti-satellite-test-ban = n
+|   |   |   |   handicapped-infants = n
+|   |   |   |   |   crime = n : democrat (2.52/0.01)
+|   |   |   |   |   crime = y : democrat (7.65/0.07)
+|   |   |   |   handicapped-infants = y : democrat (10.83/0.02)
+|   |   |   anti-satellite-test-ban = y
+|   |   |   |   physician-fee-freeze = n
+|   |   |   |   |   handicapped-infants = n
+|   |   |   |   |   |   crime = n : democrat (2.42/0.01)
+|   |   |   |   |   |   crime = y : democrat (2.28/0.03)
+|   |   |   |   |   handicapped-infants = y : democrat (4.17/0.01)
+|   |   |   |   physician-fee-freeze = y
+|   |   |   |   |   mx-missile = n : republican (2.3/0)
+|   |   |   |   |   mx-missile = y : democrat (0.01/0)
+
+Size of the tree : 143
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         407               93.5632 %
+Incorrectly Classified Instances        28                6.4368 %
+Kappa statistic                          0.8636
+Mean absolute error                      0.0699
+Root mean squared error                  0.2379
+Relative absolute error                 14.7341 %
+Root relative squared error             48.8605 %
+Total Number of Instances              435     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.955    0.095    0.941      0.955    0.948      0.864    0.966     0.971     democrat
+                 0.905    0.045    0.927      0.905    0.916      0.864    0.967     0.937     republican
+Weighted Avg.    0.936    0.076    0.936      0.936    0.935      0.864    0.966     0.958     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 255  12 |   a = democrat
+  16 152 |   b = republican
+

@@ -1,0 +1,117 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     unbalanced
+Instances:    856
+Attributes:   33
+              WBN_GC_L_0.25
+              WBN_GC_H_0.25
+              WBN_GC_L_0.50
+              WBN_GC_H_0.50
+              WBN_GC_L_0.75
+              WBN_GC_H_0.75
+              WBN_GC_L_1.00
+              WBN_GC_H_1.00
+              WBN_EN_L_0.25
+              WBN_EN_H_0.25
+              WBN_EN_L_0.50
+              WBN_EN_H_0.50
+              WBN_EN_L_0.75
+              WBN_EN_H_0.75
+              WBN_EN_L_1.00
+              WBN_EN_H_1.00
+              WBN_LP_L_0.25
+              WBN_LP_H_0.25
+              WBN_LP_L_0.50
+              WBN_LP_H_0.50
+              WBN_LP_L_0.75
+              WBN_LP_H_0.75
+              WBN_LP_L_1.00
+              WBN_LP_H_1.00
+              XLogP
+              PSA
+              NumRot
+              NumHBA
+              NumHBD
+              MW
+              BBB
+              BadGroup
+              Outcome
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+XLogP < 3.91
+|   WBN_GC_L_0.75 < -2.45 : Inactive (470/0)
+|   WBN_GC_L_0.75 >= -2.45
+|   |   WBN_LP_L_0.50 < -1.62
+|   |   |   MW < 369.41 : Inactive (9/0)
+|   |   |   MW >= 369.41
+|   |   |   |   WBN_GC_L_1.00 < -3.13 : Inactive (2/0)
+|   |   |   |   WBN_GC_L_1.00 >= -3.13
+|   |   |   |   |   WBN_GC_L_1.00 < -3.12 : Active (2/0)
+|   |   |   |   |   WBN_GC_L_1.00 >= -3.12 : Inactive (1/0)
+|   |   WBN_LP_L_0.50 >= -1.62 : Inactive (23/0)
+XLogP >= 3.91
+|   NumHBD < 0.5 : Inactive (123/0)
+|   NumHBD >= 0.5
+|   |   WBN_EN_H_0.75 < 2.77 : Inactive (48/0)
+|   |   WBN_EN_H_0.75 >= 2.77
+|   |   |   WBN_LP_L_0.50 < -1.76
+|   |   |   |   WBN_GC_H_1.00 < 4.38 : Inactive (74/0)
+|   |   |   |   WBN_GC_H_1.00 >= 4.38
+|   |   |   |   |   WBN_GC_H_0.25 < 2.34 : Active (1/0)
+|   |   |   |   |   WBN_GC_H_0.25 >= 2.34 : Inactive (14/0)
+|   |   |   WBN_LP_L_0.50 >= -1.76
+|   |   |   |   NumHBA < 6.5
+|   |   |   |   |   WBN_GC_H_1.00 < 3.8 : Inactive (18/0)
+|   |   |   |   |   WBN_GC_H_1.00 >= 3.8
+|   |   |   |   |   |   WBN_GC_H_0.50 < 2.33 : Inactive (16/0)
+|   |   |   |   |   |   WBN_GC_H_0.50 >= 2.33
+|   |   |   |   |   |   |   WBN_GC_H_0.75 < 3.05 : Active (3/0)
+|   |   |   |   |   |   |   WBN_GC_H_0.75 >= 3.05
+|   |   |   |   |   |   |   |   WBN_EN_L_1.00 < -3.22
+|   |   |   |   |   |   |   |   |   WBN_LP_H_0.25 < 1.11 : Active (2/0)
+|   |   |   |   |   |   |   |   |   WBN_LP_H_0.25 >= 1.11
+|   |   |   |   |   |   |   |   |   |   WBN_EN_H_0.50 < 2.24
+|   |   |   |   |   |   |   |   |   |   |   WBN_EN_L_1.00 < -3.53 : Inactive (3/0)
+|   |   |   |   |   |   |   |   |   |   |   WBN_EN_L_1.00 >= -3.53
+|   |   |   |   |   |   |   |   |   |   |   |   XLogP < 5.25 : Inactive (3/0)
+|   |   |   |   |   |   |   |   |   |   |   |   XLogP >= 5.25 : Active (2/0)
+|   |   |   |   |   |   |   |   |   |   WBN_EN_H_0.50 >= 2.24 : Active (2/0)
+|   |   |   |   |   |   |   |   WBN_EN_L_1.00 >= -3.22 : Inactive (8/0)
+|   |   |   |   NumHBA >= 6.5 : Inactive (32/0)
+
+Size of the tree : 41
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         835               97.5467 %
+Incorrectly Classified Instances        21                2.4533 %
+Kappa statistic                          0.0745
+Mean absolute error                      0.0245
+Root mean squared error                  0.1566
+Relative absolute error                 84.9737 %
+Root relative squared error            133.1928 %
+Total Number of Instances              856     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.083    0.012    0.091      0.083    0.087      0.075    0.536     0.020     Active
+                 0.988    0.917    0.987      0.988    0.988      0.075    0.536     0.987     Inactive
+Weighted Avg.    0.975    0.904    0.974      0.975    0.975      0.075    0.536     0.973     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   1  11 |   a = Active
+  10 834 |   b = Inactive
+

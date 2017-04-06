@@ -1,0 +1,781 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     soybean
+Instances:    683
+Attributes:   36
+              date
+              plant-stand
+              precip
+              temp
+              hail
+              crop-hist
+              area-damaged
+              severity
+              seed-tmt
+              germination
+              plant-growth
+              leaves
+              leafspots-halo
+              leafspots-marg
+              leafspot-size
+              leaf-shread
+              leaf-malf
+              leaf-mild
+              stem
+              lodging
+              stem-cankers
+              canker-lesion
+              fruiting-bodies
+              external-decay
+              mycelium
+              int-discolor
+              sclerotia
+              fruit-pods
+              fruit-spots
+              seed
+              mold-growth
+              seed-discolor
+              seed-size
+              shriveling
+              roots
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+leafspots-halo = absent
+|   fruit-pods = norm
+|   |   stem = norm
+|   |   |   seed-discolor = absent
+|   |   |   |   area-damaged = scattered
+|   |   |   |   |   date = april : 2-4-d-injury (0.09/0)
+|   |   |   |   |   date = may : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = june : powdery-mildew (1/0)
+|   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = august : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = september : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = october : powdery-mildew (1/0)
+|   |   |   |   area-damaged = low-areas
+|   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = may : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = june : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = august : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = september : powdery-mildew (1.09/0.09)
+|   |   |   |   |   date = october
+|   |   |   |   |   |   leaf-malf = absent : powdery-mildew (2/0)
+|   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.09/0)
+|   |   |   |   area-damaged = upper-areas
+|   |   |   |   |   leaf-malf = absent : powdery-mildew (5/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.36/0)
+|   |   |   |   area-damaged = whole-field
+|   |   |   |   |   leaf-malf = absent : powdery-mildew (5/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.28/0)
+|   |   |   seed-discolor = present
+|   |   |   |   area-damaged = scattered : purple-seed-stain (1.11/0.11)
+|   |   |   |   area-damaged = low-areas
+|   |   |   |   |   leaves = norm : purple-seed-stain (2/0)
+|   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.11/0)
+|   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.1/0)
+|   |   |   |   area-damaged = whole-field
+|   |   |   |   |   leaf-malf = absent : purple-seed-stain (3/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.09/0)
+|   |   stem = abnorm
+|   |   |   precip = lt-norm
+|   |   |   |   leaf-malf = absent
+|   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = july
+|   |   |   |   |   |   sclerotia = absent : brown-stem-rot (4/0)
+|   |   |   |   |   |   sclerotia = present : charcoal-rot (3/0)
+|   |   |   |   |   date = august
+|   |   |   |   |   |   sclerotia = absent : brown-stem-rot (11/0)
+|   |   |   |   |   |   sclerotia = present : charcoal-rot (5/0)
+|   |   |   |   |   date = september
+|   |   |   |   |   |   int-discolor = none : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   int-discolor = brown : brown-stem-rot (11/0)
+|   |   |   |   |   |   int-discolor = black : charcoal-rot (6/0)
+|   |   |   |   |   date = october : charcoal-rot (6/0)
+|   |   |   |   leaf-malf = present : 2-4-d-injury (3.12/0)
+|   |   |   precip = norm
+|   |   |   |   plant-stand = normal
+|   |   |   |   |   leaf-malf = absent : brown-stem-rot (4/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.27/0)
+|   |   |   |   plant-stand = lt-normal
+|   |   |   |   |   leaves = norm : brown-stem-rot (5/0)
+|   |   |   |   |   leaves = abnorm
+|   |   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.22/0)
+|   |   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   date = may : 2-4-d-injury (0.05/0)
+|   |   |   |   |   |   |   date = june : phytophthora-rot (1.52/0.06)
+|   |   |   |   |   |   |   date = july
+|   |   |   |   |   |   |   |   leaf-malf = absent : phytophthora-rot (5.14/0)
+|   |   |   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.05/0.02)
+|   |   |   |   |   |   |   date = august : phytophthora-rot (1.19/0.01)
+|   |   |   |   |   |   |   date = september : 2-4-d-injury (0.05/0)
+|   |   |   |   |   |   |   date = october : 2-4-d-injury (0.05/0)
+|   |   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.22/0)
+|   |   |   |   |   |   area-damaged = whole-field : 2-4-d-injury (0.16/0)
+|   |   |   precip = gt-norm
+|   |   |   |   canker-lesion = dna
+|   |   |   |   |   leaf-malf = absent : diaporthe-stem-canker (10/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.68/0)
+|   |   |   |   canker-lesion = brown
+|   |   |   |   |   date = april : anthracnose (1.18/0.18)
+|   |   |   |   |   date = may : anthracnose (1.12/0.12)
+|   |   |   |   |   date = june
+|   |   |   |   |   |   leaf-malf = absent : anthracnose (2/0)
+|   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.13/0)
+|   |   |   |   |   date = july : 2-4-d-injury (0.12/0)
+|   |   |   |   |   date = august
+|   |   |   |   |   |   area-damaged = scattered
+|   |   |   |   |   |   |   leaf-malf = absent : diaporthe-stem-canker (4/0)
+|   |   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.08/0)
+|   |   |   |   |   |   area-damaged = low-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = whole-field : 2-4-d-injury (0.06/0)
+|   |   |   |   |   date = september : diaporthe-stem-canker (1.12/0.12)
+|   |   |   |   |   date = october
+|   |   |   |   |   |   area-damaged = scattered
+|   |   |   |   |   |   |   leaf-malf = absent : diaporthe-stem-canker (4/0)
+|   |   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.02/0)
+|   |   |   |   |   |   area-damaged = low-areas : diaporthe-stem-canker (1.06/0.06)
+|   |   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.06/0)
+|   |   |   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   |   canker-lesion = dk-brown-blk
+|   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.2/0)
+|   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   date = april : phytophthora-rot (0.2/0)
+|   |   |   |   |   |   date = may
+|   |   |   |   |   |   |   external-decay = absent : phytophthora-rot (1.68/0.02)
+|   |   |   |   |   |   |   external-decay = firm-and-dry : anthracnose (1.01/0.01)
+|   |   |   |   |   |   |   external-decay = watery : phytophthora-rot (2.39/0.03)
+|   |   |   |   |   |   date = june
+|   |   |   |   |   |   |   leaf-malf = absent : phytophthora-rot (4.05/0)
+|   |   |   |   |   |   |   leaf-malf = present : phytophthora-rot (0.17/0.07)
+|   |   |   |   |   |   date = july : phytophthora-rot (1.58/0.01)
+|   |   |   |   |   |   date = august : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   date = september : 2-4-d-injury (0.05/0)
+|   |   |   |   |   |   date = october : 2-4-d-injury (0.05/0)
+|   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.2/0)
+|   |   |   |   |   area-damaged = whole-field : anthracnose (1.16/0.16)
+|   |   |   |   canker-lesion = tan : purple-seed-stain (1.07/0.07)
+|   fruit-pods = diseased
+|   |   canker-lesion = dna
+|   |   |   date = april : 2-4-d-injury (0.07/0)
+|   |   |   date = may : diaporthe-pod-&-stem-blight (0.79/0.05)
+|   |   |   date = june : 2-4-d-injury (0.05/0)
+|   |   |   date = july : 2-4-d-injury (0.05/0)
+|   |   |   date = august : 2-4-d-injury (0.05/0)
+|   |   |   date = september
+|   |   |   |   area-damaged = scattered : 2-4-d-injury (0.02/0)
+|   |   |   |   area-damaged = low-areas : 2-4-d-injury (0.02/0)
+|   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   area-damaged = whole-field
+|   |   |   |   |   leaves = norm : diaporthe-pod-&-stem-blight (2.58/0)
+|   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.01/0)
+|   |   |   date = october
+|   |   |   |   leaves = norm : diaporthe-pod-&-stem-blight (2.21/0)
+|   |   |   |   leaves = abnorm : 2-4-d-injury (0.06/0)
+|   |   canker-lesion = brown
+|   |   |   area-damaged = scattered
+|   |   |   |   date = april : 2-4-d-injury (0.03/0)
+|   |   |   |   date = may : 2-4-d-injury (0.03/0)
+|   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   date = august : anthracnose (1.03/0.03)
+|   |   |   |   date = september : 2-4-d-injury (0.03/0)
+|   |   |   |   date = october : anthracnose (1/0)
+|   |   |   area-damaged = low-areas : 2-4-d-injury (0.1/0)
+|   |   |   area-damaged = upper-areas
+|   |   |   |   date = april : 2-4-d-injury (0.03/0)
+|   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   date = june : 2-4-d-injury (0.03/0)
+|   |   |   |   date = july : 2-4-d-injury (0.03/0)
+|   |   |   |   date = august : anthracnose (1/0)
+|   |   |   |   date = september
+|   |   |   |   |   leaf-malf = absent : anthracnose (2/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.01/0)
+|   |   |   |   date = october : anthracnose (1.03/0.03)
+|   |   |   area-damaged = whole-field : 2-4-d-injury (0.08/0)
+|   |   canker-lesion = dk-brown-blk
+|   |   |   leaves = norm : anthracnose (24/0)
+|   |   |   leaves = abnorm
+|   |   |   |   date = april : 2-4-d-injury (0.59/0.08)
+|   |   |   |   date = may
+|   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.17/0)
+|   |   |   |   |   area-damaged = low-areas : phytophthora-rot (1.88/0.18)
+|   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   |   date = june
+|   |   |   |   |   area-damaged = scattered : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   leaf-malf = absent : phytophthora-rot (2.19/0)
+|   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.37/0.18)
+|   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.17/0)
+|   |   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   |   date = july
+|   |   |   |   |   precip = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   precip = norm
+|   |   |   |   |   |   leaf-malf = absent : phytophthora-rot (2.08/0)
+|   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.27/0.09)
+|   |   |   |   |   precip = gt-norm
+|   |   |   |   |   |   plant-stand = normal : anthracnose (1.08/0.08)
+|   |   |   |   |   |   plant-stand = lt-normal : anthracnose (1.79/0.79)
+|   |   |   |   date = august
+|   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.17/0)
+|   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   roots = norm
+|   |   |   |   |   |   |   leaf-malf = absent : anthracnose (2/0)
+|   |   |   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.02/0)
+|   |   |   |   |   |   roots = rotted : phytophthora-rot (0.5/0)
+|   |   |   |   |   |   roots = galls-cysts : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = whole-field : 2-4-d-injury (0.17/0)
+|   |   |   |   date = september
+|   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.17/0)
+|   |   |   |   |   area-damaged = low-areas : anthracnose (1.18/0.18)
+|   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = whole-field : anthracnose (1.01/0.01)
+|   |   |   |   date = october
+|   |   |   |   |   leaf-malf = absent : anthracnose (2/0)
+|   |   |   |   |   leaf-malf = present : 2-4-d-injury (0.36/0)
+|   |   canker-lesion = tan
+|   |   |   date = april : 2-4-d-injury (0.03/0)
+|   |   |   date = may : 2-4-d-injury (0.02/0)
+|   |   |   date = june : 2-4-d-injury (0.02/0)
+|   |   |   date = july : 2-4-d-injury (0.02/0)
+|   |   |   date = august : 2-4-d-injury (0.02/0)
+|   |   |   date = september : 2-4-d-injury (0.02/0)
+|   |   |   date = october
+|   |   |   |   leaf-malf = absent : purple-seed-stain (2/0)
+|   |   |   |   leaf-malf = present : 2-4-d-injury (0.02/0)
+|   fruit-pods = few-present
+|   |   leaf-malf = absent
+|   |   |   stem = norm : cyst-nematode (2.32/0)
+|   |   |   stem = abnorm : phytophthora-rot (0.56/0)
+|   |   leaf-malf = present
+|   |   |   area-damaged = scattered : 2-4-d-injury (0.1/0)
+|   |   |   area-damaged = low-areas
+|   |   |   |   stem = norm : cyst-nematode (1.73/0.1)
+|   |   |   |   stem = abnorm : phytophthora-rot (0.3/0.02)
+|   |   |   area-damaged = upper-areas : cyst-nematode (1.33/0.11)
+|   |   |   area-damaged = whole-field : 2-4-d-injury (0.08/0)
+|   fruit-pods = dna
+|   |   canker-lesion = dna : diaporthe-stem-canker (0/0)
+|   |   canker-lesion = brown
+|   |   |   plant-stand = normal
+|   |   |   |   area-damaged = scattered : 2-4-d-injury (0.03/0)
+|   |   |   |   area-damaged = low-areas
+|   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = may : 2-4-d-injury (0.01/0)
+|   |   |   |   |   date = june : 2-4-d-injury (0.01/0)
+|   |   |   |   |   date = july : rhizoctonia-root-rot (1/0)
+|   |   |   |   |   date = august : rhizoctonia-root-rot (1/0)
+|   |   |   |   |   date = september : 2-4-d-injury (0.01/0)
+|   |   |   |   |   date = october : 2-4-d-injury (0.01/0)
+|   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.03/0)
+|   |   |   |   area-damaged = whole-field : 2-4-d-injury (0.03/0)
+|   |   |   plant-stand = lt-normal
+|   |   |   |   crop-hist = diff-lst-year
+|   |   |   |   |   leaves = norm : rhizoctonia-root-rot (4/0)
+|   |   |   |   |   leaves = abnorm
+|   |   |   |   |   |   area-damaged = scattered : herbicide-injury (1.38/0.11)
+|   |   |   |   |   |   area-damaged = low-areas : 2-4-d-injury (0.1/0)
+|   |   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.1/0)
+|   |   |   |   |   |   area-damaged = whole-field : herbicide-injury (0.5/0.08)
+|   |   |   |   crop-hist = same-lst-yr
+|   |   |   |   |   leaves = norm : rhizoctonia-root-rot (5/0)
+|   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.34/0)
+|   |   |   |   crop-hist = same-lst-two-yrs
+|   |   |   |   |   date = april : rhizoctonia-root-rot (1.07/0.07)
+|   |   |   |   |   date = may
+|   |   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.02/0)
+|   |   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   |   leaves = norm : rhizoctonia-root-rot (2/0)
+|   |   |   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.03/0)
+|   |   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = june
+|   |   |   |   |   |   area-damaged = scattered : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   |   leaves = norm : rhizoctonia-root-rot (2/0)
+|   |   |   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.03/0)
+|   |   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.02/0)
+|   |   |   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   |   |   date = july : 2-4-d-injury (0.04/0)
+|   |   |   |   |   date = august : 2-4-d-injury (0.04/0)
+|   |   |   |   |   date = september : 2-4-d-injury (0.04/0)
+|   |   |   |   |   date = october : 2-4-d-injury (0.04/0)
+|   |   |   |   crop-hist = same-lst-sev-yrs
+|   |   |   |   |   area-damaged = scattered : 2-4-d-injury (0.07/0)
+|   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   leaves = norm : rhizoctonia-root-rot (4/0)
+|   |   |   |   |   |   leaves = abnorm : 2-4-d-injury (0.08/0)
+|   |   |   |   |   area-damaged = upper-areas : 2-4-d-injury (0.07/0)
+|   |   |   |   |   area-damaged = whole-field : 2-4-d-injury (0.05/0)
+|   |   canker-lesion = dk-brown-blk
+|   |   |   area-damaged = scattered
+|   |   |   |   date = april : herbicide-injury (0.7/0.13)
+|   |   |   |   date = may : herbicide-injury (0.7/0.13)
+|   |   |   |   date = june : herbicide-injury (0.58/0)
+|   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   date = august : 2-4-d-injury (0.13/0)
+|   |   |   |   date = september : 2-4-d-injury (0.13/0)
+|   |   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   |   area-damaged = low-areas
+|   |   |   |   leaf-malf = absent : phytophthora-rot (26.11/0)
+|   |   |   |   leaf-malf = present : 2-4-d-injury (0.73/0.12)
+|   |   |   area-damaged = upper-areas : 2-4-d-injury (0.5/0)
+|   |   |   area-damaged = whole-field : phytophthora-rot (1.96/0.96)
+|   |   canker-lesion = tan : diaporthe-stem-canker (0/0)
+leafspots-halo = yellow-halos
+|   mold-growth = absent
+|   |   leafspots-marg = w-s-marg
+|   |   |   seed-size = norm
+|   |   |   |   roots = norm : bacterial-blight (10/0)
+|   |   |   |   roots = rotted : phytophthora-rot (0.88/0)
+|   |   |   |   roots = galls-cysts : diaporthe-stem-canker (0/0)
+|   |   |   seed-size = lt-norm : bacterial-pustule (1.65/0.65)
+|   |   leafspots-marg = no-w-s-marg
+|   |   |   area-damaged = scattered : bacterial-pustule (3/0)
+|   |   |   area-damaged = low-areas : phytophthora-rot (0.83/0.19)
+|   |   |   area-damaged = upper-areas
+|   |   |   |   crop-hist = diff-lst-year : bacterial-pustule (1/0)
+|   |   |   |   crop-hist = same-lst-yr : bacterial-pustule (2/0)
+|   |   |   |   crop-hist = same-lst-two-yrs : bacterial-pustule (1.05/0.05)
+|   |   |   |   crop-hist = same-lst-sev-yrs : cyst-nematode (0.09/0)
+|   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   leafspots-marg = dna : diaporthe-stem-canker (0/0)
+|   mold-growth = present
+|   |   canker-lesion = dna
+|   |   |   leaf-shread = absent
+|   |   |   |   leafspots-marg = w-s-marg
+|   |   |   |   |   leaves = norm : diaporthe-pod-&-stem-blight (0.5/0)
+|   |   |   |   |   leaves = abnorm : downy-mildew (10/0)
+|   |   |   |   leafspots-marg = no-w-s-marg
+|   |   |   |   |   shriveling = absent : bacterial-pustule (2/0)
+|   |   |   |   |   shriveling = present : diaporthe-pod-&-stem-blight (0.1/0)
+|   |   |   |   leafspots-marg = dna : diaporthe-stem-canker (0/0)
+|   |   |   leaf-shread = present
+|   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   temp = norm : bacterial-pustule (6/0)
+|   |   |   |   temp = gt-norm : diaporthe-pod-&-stem-blight (0.3/0)
+|   |   canker-lesion = brown : diaporthe-stem-canker (0/0)
+|   |   canker-lesion = dk-brown-blk : phytophthora-rot (1.66/0)
+|   |   canker-lesion = tan : diaporthe-stem-canker (0/0)
+leafspots-halo = no-yellow-halos
+|   canker-lesion = dna
+|   |   fruit-pods = norm
+|   |   |   leafspot-size = lt-1/8
+|   |   |   |   seed-tmt = none : bacterial-pustule (3/0)
+|   |   |   |   seed-tmt = fungicide
+|   |   |   |   |   seed-discolor = absent : bacterial-blight (10/0)
+|   |   |   |   |   seed-discolor = present : bacterial-pustule (1/0)
+|   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   leafspot-size = gt-1/8
+|   |   |   |   precip = lt-norm : phyllosticta-leaf-spot (9/0)
+|   |   |   |   precip = norm
+|   |   |   |   |   hail = yes
+|   |   |   |   |   |   germination = 90-100
+|   |   |   |   |   |   |   leaf-shread = absent
+|   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   area-damaged = scattered : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   area-damaged = low-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   area-damaged = whole-field : frog-eye-leaf-spot (2/0)
+|   |   |   |   |   |   |   |   plant-stand = lt-normal
+|   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = norm : phyllosticta-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   leaf-shread = present : phyllosticta-leaf-spot (1/0)
+|   |   |   |   |   |   germination = 80-89
+|   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   date = august
+|   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   date = september : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   date = october : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   plant-stand = lt-normal : phyllosticta-leaf-spot (5/0)
+|   |   |   |   |   |   germination = lt-80
+|   |   |   |   |   |   |   area-damaged = scattered
+|   |   |   |   |   |   |   |   plant-stand = normal : brown-spot (1/0)
+|   |   |   |   |   |   |   |   plant-stand = lt-normal : phyllosticta-leaf-spot (1/0)
+|   |   |   |   |   |   |   area-damaged = low-areas : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   area-damaged = upper-areas
+|   |   |   |   |   |   |   |   crop-hist = diff-lst-year : phyllosticta-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-yr : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : brown-spot (1/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : brown-spot (1/0)
+|   |   |   |   |   |   |   area-damaged = whole-field : phyllosticta-leaf-spot (2/0)
+|   |   |   |   |   hail = no
+|   |   |   |   |   |   date = april : brown-spot (1/0)
+|   |   |   |   |   |   date = may : brown-spot (1/0)
+|   |   |   |   |   |   date = june : brown-spot (2/0)
+|   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   date = august : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   date = october : alternarialeaf-spot (4/0)
+|   |   |   |   precip = gt-norm
+|   |   |   |   |   mold-growth = absent
+|   |   |   |   |   |   area-damaged = scattered
+|   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   date = may : brown-spot (1/0)
+|   |   |   |   |   |   |   date = june : brown-spot (1/0)
+|   |   |   |   |   |   |   date = july
+|   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year
+|   |   |   |   |   |   |   |   |   |   hail = yes : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   hail = no : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   plant-stand = lt-normal : frog-eye-leaf-spot (2/0)
+|   |   |   |   |   |   |   date = august
+|   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   germination = 90-100 : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   germination = 80-89 : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   germination = lt-80 : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = gt-norm : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   plant-stand = lt-normal
+|   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   seed-tmt = none : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = fungicide : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   date = september : alternarialeaf-spot (8/0)
+|   |   |   |   |   |   |   date = october : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   area-damaged = low-areas
+|   |   |   |   |   |   |   severity = minor
+|   |   |   |   |   |   |   |   germination = 90-100 : alternarialeaf-spot (4/0)
+|   |   |   |   |   |   |   |   germination = 80-89
+|   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = may : brown-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = august : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = october : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   germination = lt-80 : alternarialeaf-spot (5/0)
+|   |   |   |   |   |   |   severity = pot-severe
+|   |   |   |   |   |   |   |   germination = 90-100
+|   |   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   |   seed-tmt = none
+|   |   |   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   temp = norm : brown-spot (5/0)
+|   |   |   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = fungicide
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr
+|   |   |   |   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   temp = norm : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   plant-stand = lt-normal : brown-spot (1/0)
+|   |   |   |   |   |   |   |   germination = 80-89
+|   |   |   |   |   |   |   |   |   date = april : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = july : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = august : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = october : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   germination = lt-80
+|   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = may : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = august
+|   |   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : alternarialeaf-spot (2/1)
+|   |   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   severity = severe : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = upper-areas
+|   |   |   |   |   |   |   germination = 90-100
+|   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = june : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = august : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   temp = gt-norm
+|   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   date = august : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   date = october : alternarialeaf-spot (3/0)
+|   |   |   |   |   |   |   germination = 80-89
+|   |   |   |   |   |   |   |   leaf-shread = absent
+|   |   |   |   |   |   |   |   |   seed-tmt = none
+|   |   |   |   |   |   |   |   |   |   severity = minor : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   severity = pot-severe
+|   |   |   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   date = june : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   date = july : frog-eye-leaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   |   date = august
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   date = september : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   severity = severe : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   seed-tmt = fungicide : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   leaf-shread = present
+|   |   |   |   |   |   |   |   |   severity = minor : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   severity = pot-severe : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   severity = severe : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   germination = lt-80
+|   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-yr
+|   |   |   |   |   |   |   |   |   seed-tmt = none : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   seed-tmt = fungicide : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs
+|   |   |   |   |   |   |   |   |   severity = minor
+|   |   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   temp = norm : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   severity = pot-severe : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   severity = severe : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   area-damaged = whole-field
+|   |   |   |   |   |   |   severity = minor
+|   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   leaf-shread = absent
+|   |   |   |   |   |   |   |   |   |   seed-tmt = none : alternarialeaf-spot (3/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = fungicide
+|   |   |   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = may : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = june : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = july : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = august : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = september : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   date = october : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   temp = gt-norm
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr
+|   |   |   |   |   |   |   |   |   |   |   |   |   germination = 90-100 : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   germination = 80-89 : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   germination = lt-80 : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   seed-tmt = other : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   leaf-shread = present : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   plant-stand = lt-normal
+|   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs
+|   |   |   |   |   |   |   |   |   |   |   leaf-shread = absent : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   |   leaf-shread = present : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   temp = gt-norm : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   severity = pot-severe
+|   |   |   |   |   |   |   |   seed-tmt = none
+|   |   |   |   |   |   |   |   |   plant-stand = normal
+|   |   |   |   |   |   |   |   |   |   date = april : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   date = may : brown-spot (3/0)
+|   |   |   |   |   |   |   |   |   |   date = june : brown-spot (4/0)
+|   |   |   |   |   |   |   |   |   |   date = july : brown-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   date = august : alternarialeaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   date = september : alternarialeaf-spot (2/0)
+|   |   |   |   |   |   |   |   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   plant-stand = lt-normal : brown-spot (10/0)
+|   |   |   |   |   |   |   |   seed-tmt = fungicide
+|   |   |   |   |   |   |   |   |   temp = lt-norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   temp = norm
+|   |   |   |   |   |   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-yr : frog-eye-leaf-spot (1/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-two-yrs : brown-spot (3/0)
+|   |   |   |   |   |   |   |   |   |   crop-hist = same-lst-sev-yrs : brown-spot (3/0)
+|   |   |   |   |   |   |   |   |   temp = gt-norm
+|   |   |   |   |   |   |   |   |   |   plant-growth = norm : alternarialeaf-spot (4/0)
+|   |   |   |   |   |   |   |   |   |   plant-growth = abnorm : brown-spot (1/0)
+|   |   |   |   |   |   |   |   seed-tmt = other : brown-spot (4/0)
+|   |   |   |   |   |   |   severity = severe : brown-spot (1/0)
+|   |   |   |   |   mold-growth = present : downy-mildew (10/0)
+|   |   |   leafspot-size = dna : diaporthe-stem-canker (0/0)
+|   |   fruit-pods = diseased
+|   |   |   fruit-spots = absent : diaporthe-stem-canker (0/0)
+|   |   |   fruit-spots = colored : frog-eye-leaf-spot (2/0)
+|   |   |   fruit-spots = brown-w/blk-specks : diaporthe-pod-&-stem-blight (8.56/0)
+|   |   |   fruit-spots = distort : diaporthe-stem-canker (0/0)
+|   |   |   fruit-spots = dna : diaporthe-stem-canker (0/0)
+|   |   fruit-pods = few-present : cyst-nematode (4.73/0)
+|   |   fruit-pods = dna : herbicide-injury (2.37/0)
+|   canker-lesion = brown
+|   |   fruiting-bodies = absent
+|   |   |   date = april : herbicide-injury (0.03/0)
+|   |   |   date = may : herbicide-injury (0.06/0)
+|   |   |   date = june : cyst-nematode (0.09/0.03)
+|   |   |   date = july
+|   |   |   |   area-damaged = scattered : frog-eye-leaf-spot (1/0)
+|   |   |   |   area-damaged = low-areas : brown-spot (1.05/0.05)
+|   |   |   |   area-damaged = upper-areas : cyst-nematode (0.05/0)
+|   |   |   |   area-damaged = whole-field : brown-spot (1/0)
+|   |   |   date = august
+|   |   |   |   fruit-pods = norm : frog-eye-leaf-spot (1/0)
+|   |   |   |   fruit-pods = diseased : frog-eye-leaf-spot (2/0)
+|   |   |   |   fruit-pods = few-present : cyst-nematode (0.09/0)
+|   |   |   |   fruit-pods = dna : diaporthe-stem-canker (0/0)
+|   |   |   date = september : frog-eye-leaf-spot (6/0)
+|   |   |   date = october : diaporthe-stem-canker (0/0)
+|   |   fruiting-bodies = present
+|   |   |   temp = lt-norm : herbicide-injury (0.33/0.01)
+|   |   |   temp = norm
+|   |   |   |   roots = norm : brown-spot (31/0)
+|   |   |   |   roots = rotted : diaporthe-stem-canker (0/0)
+|   |   |   |   roots = galls-cysts : cyst-nematode (0.65/0)
+|   |   |   temp = gt-norm : diaporthe-stem-canker (0/0)
+|   canker-lesion = dk-brown-blk
+|   |   plant-growth = norm : frog-eye-leaf-spot (55/0)
+|   |   plant-growth = abnorm
+|   |   |   date = april : phytophthora-rot (0.8/0.23)
+|   |   |   date = may
+|   |   |   |   crop-hist = diff-lst-year : phytophthora-rot (0.57/0)
+|   |   |   |   crop-hist = same-lst-yr
+|   |   |   |   |   area-damaged = scattered : herbicide-injury (0.23/0)
+|   |   |   |   |   area-damaged = low-areas : phytophthora-rot (2.28/0)
+|   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = whole-field : herbicide-injury (0.23/0)
+|   |   |   |   crop-hist = same-lst-two-yrs : phytophthora-rot (4/0)
+|   |   |   |   crop-hist = same-lst-sev-yrs : phytophthora-rot (1.71/0)
+|   |   |   date = june
+|   |   |   |   fruit-pods = norm : diaporthe-stem-canker (0/0)
+|   |   |   |   fruit-pods = diseased : diaporthe-stem-canker (0/0)
+|   |   |   |   fruit-pods = few-present
+|   |   |   |   |   roots = norm : diaporthe-stem-canker (0/0)
+|   |   |   |   |   roots = rotted : phytophthora-rot (5.41/0)
+|   |   |   |   |   roots = galls-cysts : cyst-nematode (0.39/0)
+|   |   |   |   fruit-pods = dna
+|   |   |   |   |   area-damaged = scattered : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = low-areas : phytophthora-rot (3.16/0)
+|   |   |   |   |   area-damaged = upper-areas : diaporthe-stem-canker (0/0)
+|   |   |   |   |   area-damaged = whole-field : herbicide-injury (0.23/0)
+|   |   |   date = july
+|   |   |   |   area-damaged = scattered : diaporthe-stem-canker (0/0)
+|   |   |   |   area-damaged = low-areas
+|   |   |   |   |   crop-hist = diff-lst-year : diaporthe-stem-canker (0/0)
+|   |   |   |   |   crop-hist = same-lst-yr : phytophthora-rot (2.28/0)
+|   |   |   |   |   crop-hist = same-lst-two-yrs
+|   |   |   |   |   |   stem = norm : cyst-nematode (0.39/0)
+|   |   |   |   |   |   stem = abnorm : phytophthora-rot (4.57/0)
+|   |   |   |   |   crop-hist = same-lst-sev-yrs : phytophthora-rot (3.43/0)
+|   |   |   |   area-damaged = upper-areas : cyst-nematode (0.39/0)
+|   |   |   |   area-damaged = whole-field : diaporthe-stem-canker (0/0)
+|   |   |   date = august
+|   |   |   |   roots = norm : diaporthe-stem-canker (0/0)
+|   |   |   |   roots = rotted : phytophthora-rot (3.43/0)
+|   |   |   |   roots = galls-cysts : cyst-nematode (0.65/0)
+|   |   |   date = september : diaporthe-stem-canker (0/0)
+|   |   |   date = october : diaporthe-stem-canker (0/0)
+|   canker-lesion = tan
+|   |   plant-growth = norm
+|   |   |   fruiting-bodies = absent : purple-seed-stain (11/0)
+|   |   |   fruiting-bodies = present : brown-spot (5/0)
+|   |   plant-growth = abnorm
+|   |   |   seed-size = norm
+|   |   |   |   fruit-pods = norm : brown-stem-rot (9/0)
+|   |   |   |   fruit-pods = diseased : diaporthe-stem-canker (0/0)
+|   |   |   |   fruit-pods = few-present : diaporthe-stem-canker (0/0)
+|   |   |   |   fruit-pods = dna : herbicide-injury (0.25/0)
+|   |   |   seed-size = lt-norm : cyst-nematode (0.54/0.01)
+
+Size of the tree : 668
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         574               84.041  %
+Incorrectly Classified Instances       109               15.959  %
+Kappa statistic                          0.825 
+Mean absolute error                      0.0191
+Root mean squared error                  0.1255
+Relative absolute error                 19.8793 %
+Root relative squared error             57.263  %
+Total Number of Instances              683     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.900    0.003    0.900      0.900    0.900      0.897    0.948     0.808     diaporthe-stem-canker
+                 0.850    0.002    0.944      0.850    0.895      0.893    0.924     0.805     charcoal-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     rhizoctonia-root-rot
+                 1.000    0.010    0.936      1.000    0.967      0.963    0.997     0.952     phytophthora-rot
+                 0.955    0.008    0.894      0.955    0.923      0.918    0.986     0.911     brown-stem-rot
+                 0.700    0.000    1.000      0.700    0.824      0.833    0.847     0.709     powdery-mildew
+                 0.750    0.006    0.789      0.750    0.769      0.763    0.896     0.730     downy-mildew
+                 0.815    0.027    0.824      0.815    0.820      0.792    0.902     0.763     brown-spot
+                 0.800    0.005    0.842      0.800    0.821      0.816    0.899     0.759     bacterial-blight
+                 0.750    0.006    0.789      0.750    0.769      0.763    0.871     0.661     bacterial-pustule
+                 0.850    0.002    0.944      0.850    0.895      0.893    0.924     0.854     purple-seed-stain
+                 0.864    0.003    0.950      0.864    0.905      0.900    0.929     0.866     anthracnose
+                 0.600    0.009    0.667      0.600    0.632      0.622    0.819     0.442     phyllosticta-leaf-spot
+                 0.868    0.046    0.745      0.868    0.802      0.772    0.913     0.681     alternarialeaf-spot
+                 0.692    0.019    0.851      0.692    0.764      0.737    0.860     0.668     frog-eye-leaf-spot
+                 1.000    0.001    0.938      1.000    0.968      0.968    0.999     0.891     diaporthe-pod-&-stem-blight
+                 0.929    0.003    0.867      0.929    0.897      0.895    0.958     0.673     cyst-nematode
+                 0.875    0.025    0.452      0.875    0.596      0.617    0.976     0.324     2-4-d-injury
+                 0.375    0.001    0.750      0.375    0.500      0.527    0.864     0.613     herbicide-injury
+Weighted Avg.    0.840    0.016    0.851      0.840    0.841      0.828    0.922     0.766     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s   <-- classified as
+ 18  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  1  0 |  a = diaporthe-stem-canker
+  0 17  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  2  0 |  b = charcoal-rot
+  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  c = rhizoctonia-root-rot
+  0  0  0 88  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  d = phytophthora-rot
+  0  0  0  0 42  0  0  0  0  0  1  0  0  0  0  0  0  1  0 |  e = brown-stem-rot
+  0  0  0  0  0 14  0  0  0  0  0  0  0  1  0  1  0  4  0 |  f = powdery-mildew
+  0  0  0  0  0  0 15  2  0  0  0  0  0  1  1  0  0  1  0 |  g = downy-mildew
+  0  0  0  1  2  0  2 75  0  0  0  2  3  5  1  0  1  0  0 |  h = brown-spot
+  0  0  0  0  0  0  0  0 16  2  0  0  0  1  0  0  1  0  0 |  i = bacterial-blight
+  0  0  0  1  0  0  0  0  3 15  0  0  0  0  0  0  0  1  0 |  j = bacterial-pustule
+  0  1  0  0  1  0  0  0  0  0 17  0  0  0  0  0  0  1  0 |  k = purple-seed-stain
+  1  0  0  1  0  0  0  0  0  0  0 38  0  0  0  0  0  4  0 |  l = anthracnose
+  0  0  0  0  0  0  1  5  0  1  0  0 12  1  0  0  0  0  0 |  m = phyllosticta-leaf-spot
+  0  0  0  0  0  0  0  3  0  0  0  0  0 79  9  0  0  0  0 |  n = alternarialeaf-spot
+  1  0  0  1  0  0  0  5  0  0  0  0  3 18 63  0  0  0  0 |  o = frog-eye-leaf-spot
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 15  0  0  0 |  p = diaporthe-pod-&-stem-blight
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 13  1  0 |  q = cyst-nematode
+  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0 14  1 |  r = 2-4-d-injury
+  0  0  0  1  0  0  1  1  0  1  0  0  0  0  0  0  0  1  3 |  s = herbicide-injury
+
